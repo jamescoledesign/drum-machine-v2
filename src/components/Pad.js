@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { sounds } from "../sounds"
 
 function Pad(props) {
-
+    
+    const [padName, setPadName] = useState();
     let padSound;
 
+    React.useEffect(() => {
+        if (props.mode === "drumSounds") {
+            setPadName(sounds.drumSounds[props.sound].title);
+        } else if (props.mode === "catSounds") {
+            setPadName(sounds.catSounds[props.sound].title);
+        }
+    }, []);
+
     function makeSound(mode, value) {
-        if (mode === "drum") {
-            padSound = sounds.drumSounds[value];
-        } else if (mode === "cat") {
-            padSound = sounds.catSounds[value];
+        if (mode === "drumSounds") {
+            padSound = sounds.drumSounds[value].sound;
+            console.log(padName)
+        } else if (mode === "catSounds") {
+            padSound = sounds.catSounds[value].sound;
         }
         return padSound = new Audio(padSound);
     }
 
     function handleClick() {
         makeSound(props.mode, props.sound);
+        
         let pad = document.getElementById(props.id);
         pad.style.backgroundColor = "red";
         padSound.play();
@@ -31,7 +42,7 @@ function Pad(props) {
     return (
         <div id={props.id} className="pad" onMouseDown={handleClick} onMouseUp={resetPad} sound={props.sound} mode={props.mode}>
             <div className="pad-content noselect">
-                <div className="sound-title">{props.title}</div>
+                <div className="sound-title">{padName}</div>
                 <div className="pad-assignment">{props.keyAssignment}</div>
             </div>
         </div>

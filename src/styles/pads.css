@@ -1,3 +1,7 @@
+.pads {
+  max-width: 600px;
+}
+
 .pad {
   z-index: 0;
   width: 25%;

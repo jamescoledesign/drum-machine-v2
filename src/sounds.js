@@ -33,41 +33,137 @@ import Mahh from "./sounds/cat/15-Mahh.mp3"
 import MowMeowRow from "./sounds/cat/16-MowMeowRow.mp3"
 
 export const sounds = {
-  "drumSounds": [
-      Crash,
-      DjembeCenter,
-      DjembeRim,
-      FloorTom,
-      HatClosed,
-      HatOpen,
-      HatPedal,
-      Kick,
-      RideBell,
-      Ride,
-      SnareCenter,
-      SnareEdge,
-      SnareRim,
-      TamA,
-      TamB,
-      Tom
+  drumSounds: [
+    {
+      title: "Crash",
+      sound: Crash
+    },
+    {
+      title: "Djembe Center",
+      sound: DjembeCenter
+    },
+    {
+      title: "Djembe Rim",
+      sound: DjembeRim
+    },
+    {
+      title: "Floor Tom",
+      sound: FloorTom
+    },
+    {
+      title: "Hat Closed",
+      sound: HatClosed
+    },
+    {
+      title: "Hat Open",
+      sound: HatOpen
+    },
+    {
+      title: "Hat Pedal",
+      sound: HatPedal
+    },
+    {
+      title: "Kick",
+      sound: Kick
+    },
+    {
+      title: "Ride Bell",
+      sound: RideBell
+    },
+    {
+      title: "Ride",
+      sound: Ride
+    },
+    {
+      title: "Snare Center",
+      sound: SnareCenter
+    },
+    {
+      title: "Snare Edge",
+      sound: SnareEdge
+    },
+    {
+      title: "Snare Rim",
+      sound: SnareRim
+    },
+    {
+      title: "Tam A",
+      sound: TamA
+    },
+    {
+      title: "Tam B",
+      sound: TamB
+    },
+    {
+      title: "Tom",
+      sound: Tom
+    },
     ],
-    "catSounds": [
-      Trill,
-      Maow,
-      Aww,
-      Eahh,
-      Ahh,
-      Wowww,
-      Uhwuhh,
-      Waaah,
-      Meeahh,
-      Whirr,
-      Ehhw,
-      Mmreaww,
-      Mmyeah,
-      Mehh,
-      Mahh,
-      MowMeowRow
+    catSounds: [
+      {
+        title: "Trill",
+        sound: Trill
+      },
+      {
+        title: "Maow",
+        sound: Maow
+      },
+      {
+        title: "Aww",
+        sound: Aww
+      },
+      {
+        title: "Eahh",
+        sound: Eahh
+      },
+      {
+        title: "Ahh",
+        sound: Ahh
+      },
+      {
+        title: "Wowww",
+        sound: Wowww
+      },
+      {
+        title: "Uhwuhh",
+        sound: Uhwuhh
+      },
+      {
+        title: "Waaah",
+        sound: Waaah
+      },
+      {
+        title: "Meeahh",
+        sound: Meeahh
+      },
+      {
+        title: "Whirr",
+        sound: Whirr
+      },
+      {
+        title: "Ehhw",
+        sound: Ehhw
+      },
+      {
+        title: "Mmreaww",
+        sound: Mmreaww
+      },
+      {
+        title: "Mmyeah",
+        sound: Mmyeah
+      },
+      {
+        title: "Mehh",
+        sound: Mehh
+      },
+      {
+        title: "Mahh",
+        sound: Mahh
+      },
+      {
+        title: "MowMeowRow",
+        sound: MowMeowRow
+      }
     ]
 }
 
