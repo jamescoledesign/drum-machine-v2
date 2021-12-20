@@ -9,6 +9,7 @@ function AllPads() {
         id="pad1" 
         title="Title" 
         keyAssignment="Key 1"
+        mode="drum"
         sound="0"
         />
     </section>

@@ -1,31 +1,36 @@
 import React from "react";
-import Crash from "../sounds/drum/Crash.wav"
 import { sounds } from "../sounds"
 
 function Pad(props) {
 
-    const customData = require('../sounds');
+    let padSound;
 
-let audio1 = new Audio(sounds.drumSounds[props.sound]); 
+    function makeSound(mode, value) {
+        if (mode === "drum") {
+            padSound = sounds.drumSounds[value];
+        } else if (mode === "cat") {
+            padSound = sounds.catSounds[value];
+        }
+        return padSound = new Audio(padSound);
+    }
 
-let audioArr = [audio1];
+    function handleClick() {
+        makeSound(props.mode, props.sound);
+        let pad = document.getElementById(props.id);
+        pad.style.backgroundColor = "red";
+        padSound.play();
+        console.log(props.sound);
+    }
 
-function handleClick() {
-    let pad = document.getElementById(props.id);
-    pad.style.backgroundColor = "red";
-    audioArr[0].play();
-    console.log(props.sound);
-}
-
-function resetPad() {
-    let pad = document.getElementById(props.id);
-    pad.style.backgroundColor = "#212121";
-    audioArr[0].pause();
-    audioArr[0].currentTime = 0;
-}
+    function resetPad() {
+        let pad = document.getElementById(props.id);
+        pad.style.backgroundColor = "#212121";
+        padSound.pause();
+        padSound.currentTime = 0;
+    }
 
     return (
-        <div id={props.id} className="pad" onMouseDown={handleClick} onMouseUp={resetPad} sound={props.sound}>
+        <div id={props.id} className="pad" onMouseDown={handleClick} onMouseUp={resetPad} sound={props.sound} mode={props.mode}>
             <div className="pad-content noselect">
                 <div className="sound-title">{props.title}</div>
                 <div className="pad-assignment">{props.keyAssignment}</div>

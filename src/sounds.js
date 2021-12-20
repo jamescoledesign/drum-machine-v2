@@ -1,5 +1,6 @@
 import React from "react"
 import Crash from "./sounds/drum/Crash.wav"
+import Trill from "./sounds/cat/1-Trill.wav"
 
 export const sounds = {
   "drumSounds": [
@@ -7,7 +8,7 @@ export const sounds = {
     "sound2"
     ],
     "catSounds": [
-      "sound1",
+      Trill,
       "sound2"
     ]
 }
