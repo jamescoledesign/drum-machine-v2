@@ -19,7 +19,6 @@ function Pad(props) {
         let pad = document.getElementById(props.id);
         pad.style.backgroundColor = "red";
         padSound.play();
-        console.log(props.sound);
     }
 
     function resetPad() {

@@ -2,7 +2,7 @@
   z-index: 0;
   width: 25%;
   color: white;
-  margin: 5px;
+  margin: 0 5px;
   background-color: #212121;
   position: relative;
   border-radius: 8px;
@@ -46,4 +46,10 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+.pad-row {
+  margin: 0 5px 10px 5px;
+  display: flex;
+  flex-direction: row;
 }
