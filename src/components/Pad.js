@@ -17,7 +17,6 @@ function Pad(props) {
     function makeSound(mode, value) {
         if (mode === "drumSounds") {
             padSound = sounds.drumSounds[value].sound;
-            console.log(padName)
         } else if (mode === "catSounds") {
             padSound = sounds.catSounds[value].sound;
         }
@@ -26,7 +25,6 @@ function Pad(props) {
 
     function handleClick() {
         makeSound(props.mode, props.sound);
-        
         let pad = document.getElementById(props.id);
         pad.style.backgroundColor = "red";
         padSound.play();

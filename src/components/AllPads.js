@@ -1,12 +1,9 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/pads.css';
-import Logo from '../images/WPD001-Logo_WPD001-Logo-Light.svg'
 import Pad from './Pad';
 
-function AllPads() {
-
-  const [mode, setMode] = useState("drumSounds");
+function AllPads(props) {
 
   return (
     <section id="pads" className="pads">
@@ -17,25 +14,25 @@ function AllPads() {
         <Pad 
           id="pad1" 
           keyAssignment="Key 1"
-          mode={mode}
+          mode={props.mode}
           sound="0"
           />
         <Pad 
           id="pad2" 
           keyAssignment="Key 2"
-          mode={mode}
+          mode={props.mode}
           sound="1"
           />
         <Pad 
           id="pad3" 
           keyAssignment="Key 3"
-          mode={mode}
+          mode={props.mode}
           sound="2"
           />
         <Pad 
           id="pad4" 
           keyAssignment="Key 4"
-          mode={mode}
+          mode={props.mode}
           sound="3"
           />
       </div>
@@ -46,25 +43,25 @@ function AllPads() {
         <Pad 
           id="pad5" 
           keyAssignment="Key Q"
-          mode={mode}
+          mode={props.mode}
           sound="4"
           />
         <Pad 
           id="pad6" 
           keyAssignment="Key W"
-          mode={mode}
+          mode={props.mode}
           sound="5"
           />
         <Pad 
           id="pad7" 
           keyAssignment="Key E"
-          mode={mode}
+          mode={props.mode}
           sound="6"
           />
         <Pad 
           id="pad8" 
           keyAssignment="Key R"
-          mode={mode}
+          mode={props.mode}
           sound="7"
           />
       </div>
@@ -75,25 +72,25 @@ function AllPads() {
         <Pad 
           id="pad9" 
           keyAssignment="Key A"
-          mode={mode}
+          mode={props.mode}
           sound="8"
           />
         <Pad 
           id="pad10" 
           keyAssignment="Key S"
-          mode={mode}
+          mode={props.mode}
           sound="9"
           />
         <Pad 
           id="pad11" 
           keyAssignment="Key D"
-          mode={mode}
+          mode={props.mode}
           sound="10"
           />
         <Pad 
           id="pad12" 
           keyAssignment="Key F"
-          mode={mode}
+          mode={props.mode}
           sound="11"
           />
       </div>
@@ -104,25 +101,25 @@ function AllPads() {
         <Pad 
           id="pad13" 
           keyAssignment="Key Z"
-          mode={mode}
+          mode={props.mode}
           sound="12"
           />
         <Pad 
           id="pad14" 
           keyAssignment="Key X"
-          mode={mode}
+          mode={props.mode}
           sound="13"
           />
         <Pad 
           id="pad15" 
           keyAssignment="Key C"
-          mode={mode}
+          mode={props.mode}
           sound="14"
           />
         <Pad 
           id="pad16" 
           keyAssignment="Key V"
-          mode={mode}
+          mode={props.mode}
           sound="15"
           />
       </div>

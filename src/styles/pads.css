@@ -1,5 +1,8 @@
 .pads {
   max-width: 600px;
+  margin-left: 30px;
+  width: 75%;
+  float: right;
 }
 
 .pad {
