@@ -7,7 +7,7 @@ import AllPads from './AllPads';
 import Button from './Button';
 
 function Interface() {
-  
+ 
   const [mode, setMode] = useState("drumSounds");
  
   function loadDrumSounds() {
@@ -36,10 +36,8 @@ function Interface() {
               <p>Use your keyboard, mouse, or fingers to trigger the pads. The key controls are shown on each pad. Make sure your audio isn't muted!</p>
           </div>
           <hr />
-
           <Button id="drum-button" className="load-red" text="Play Drum Sounds" onClick={loadDrumSounds} />
           <Button id="cat-button" className="load-gray" text="Play Cat Sounds" onClick={loadCatSounds} />
-
         </div>
         <div id="message" className="message">
             <p>Let's make noise!</p>

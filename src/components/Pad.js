@@ -37,6 +37,19 @@ function Pad(props) {
         padSound.currentTime = 0;
     }
 
+    document.onkeydown = function(e) {
+        let keyResult = "pad" + e.key;
+        console.log(keyResult);
+        let pad = document.getElementById(keyResult);
+        pad.style.backgroundColor = "red";
+    }
+
+    document.onkeyup = function(e) {
+        let keyResult = "pad" + e.key;
+        let pad = document.getElementById(keyResult);
+        pad.style.backgroundColor = "#212121";
+    }
+
     return (
         <div id={props.id} className="pad" onMouseDown={handleClick} onMouseUp={resetPad} sound={props.sound} mode={props.mode}>
             <div className="pad-content noselect">
