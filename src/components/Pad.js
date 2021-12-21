@@ -9,8 +9,10 @@ function Pad(props) {
     useEffect(() => {
         if (props.mode === "drumSounds") {
             setPadName(sounds.drumSounds[props.sound].title);
+            padSound = sounds.drumSounds[props.sound].sound;
         } else if (props.mode === "catSounds") {
             setPadName(sounds.catSounds[props.sound].title);
+            padSound = sounds.catSounds[props.sound].sound;
         }
     });
 
@@ -39,15 +41,19 @@ function Pad(props) {
 
     document.onkeydown = function(e) {
         let keyResult = "pad" + e.key;
-        console.log(keyResult);
         let pad = document.getElementById(keyResult);
+{/* This is where im stuck */} console.log(pad.id);
+        padSound = makeSound(props.mode, 0);       
         pad.style.backgroundColor = "red";
+        padSound.play();
     }
 
     document.onkeyup = function(e) {
         let keyResult = "pad" + e.key;
         let pad = document.getElementById(keyResult);
         pad.style.backgroundColor = "#212121";
+        padSound.pause();
+        padSound.currentTime = 0;
     }
 
     return (
