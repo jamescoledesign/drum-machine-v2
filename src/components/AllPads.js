@@ -1,12 +1,20 @@
-
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import '../styles/pads.css';
 import Pad from './Pad';
+import Button from './Button'
+import '../styles/controls.css';
 
 function AllPads(props) {
 
+  const [mode, setMode] = useState(props.mode);
+
+  useEffect(() => {
+    setMode(props.mode)
+    console.log(mode);
+  });
+
   return (
-    <section id="pads" className="pads">
+    <section id={props.id} className="pads" mode={props.mode}>
 
       {/* -----Row 1-----*/}
 
@@ -14,7 +22,7 @@ function AllPads(props) {
         <Pad 
           id="pad1" 
           keyAssignment="Key 1"
-          mode={props.mode}
+          mode={mode}
           sound="0"
           />
         <Pad 

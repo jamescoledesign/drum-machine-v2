@@ -13,10 +13,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.interface {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}

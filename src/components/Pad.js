@@ -6,13 +6,13 @@ function Pad(props) {
     const [padName, setPadName] = useState();
     let padSound;
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (props.mode === "drumSounds") {
             setPadName(sounds.drumSounds[props.sound].title);
         } else if (props.mode === "catSounds") {
             setPadName(sounds.catSounds[props.sound].title);
         }
-    }, []);
+    });
 
     function makeSound(mode, value) {
         if (mode === "drumSounds") {
