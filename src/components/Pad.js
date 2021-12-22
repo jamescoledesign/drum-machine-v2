@@ -96,8 +96,8 @@ function Pad(props) {
         padSound.currentTime = 0;
     }
 
-        return (
-        <div id={props.id} className="pad" onMouseDown={handleClick} onMouseUp={resetPad} sound={props.sound} mode={props.mode}>
+    return (
+        <div id={props.id} className="pad" onMouseDown={handleClick} onMouseUp={resetPad} sound={props.sound} mode={props.mode} onClick={props.onClick}>
             <div className="pad-content noselect">
                 <div className="sound-title">{padName}</div>
                 <div className="pad-assignment">{props.keyAssignment}</div>

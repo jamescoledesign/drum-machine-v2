@@ -37,8 +37,8 @@ function Interface() {
           </div>
           <hr />
           <div className="buttons">
-            <Button id="drum-button" className="load-red" text="Play Drum Sounds" onClick={loadDrumSounds} />
-            <Button id="cat-button" className="load-gray" text="Play Cat Sounds" onClick={loadCatSounds} />
+            <Button id="drum-button" className="load-red" text="Load Drum Sounds" onClick={loadDrumSounds} />
+            <Button id="cat-button" className="load-gray" text="Load Cat Sounds" onClick={loadCatSounds} />
           </div>
         </div>
         <div id="message" className="message">
