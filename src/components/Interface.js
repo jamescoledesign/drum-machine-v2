@@ -36,8 +36,10 @@ function Interface() {
               <p>Use your keyboard, mouse, or fingers to trigger the pads. The key controls are shown on each pad. Make sure your audio isn't muted!</p>
           </div>
           <hr />
-          <Button id="drum-button" className="load-red" text="Play Drum Sounds" onClick={loadDrumSounds} />
-          <Button id="cat-button" className="load-gray" text="Play Cat Sounds" onClick={loadCatSounds} />
+          <div className="buttons">
+            <Button id="drum-button" className="load-red" text="Play Drum Sounds" onClick={loadDrumSounds} />
+            <Button id="cat-button" className="load-gray" text="Play Cat Sounds" onClick={loadCatSounds} />
+          </div>
         </div>
         <div id="message" className="message">
             <p>Let's make noise!</p>

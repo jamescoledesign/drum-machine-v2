@@ -1,19 +1,35 @@
 .interface {
+  max-width: 960px;
+  margin: 0 auto;
   margin-top: 30px;
+  padding-left: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+@media only screen and (max-width: 768px) {
+  .interface {
+      align-content: center;
+      margin: 0 auto;
+      width: 100%;
+      flex-direction: column;
+      padding-left: unset;
+  }
+} 
+
 .controls {
-  width: 25%;
-  margin: 0;
-  max-width: 300px;
-  float: left;
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 10px 10px;
+  width: 40%;
+  margin-right: 30px;
 }
+
+@media only screen and (max-width: 768px) {
+  .controls {
+    width: unset;
+    margin: 0 20px 0 20px;
+  }
+} 
+
 
 .instructions {
   align-items: center;
@@ -33,11 +49,28 @@ hr {
   margin: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  hr {
+    display: none;
+  }
+} 
+
 .selection {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 30px 0 0 0;
+  margin: 30px 15px 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .selection {
+    margin: 0 30px 0 0;
+  }
+} 
+
+.buttons {
+  display: flex;
+  flex-direction: row;
 }
 
 button.load-red {
@@ -86,6 +119,12 @@ h4 {
   margin: 0px 0 30px 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .logo {
+    margin: 30px 0 30px 0;
+  }
+} 
+
 .message {
   margin: 30px 0 0 0;
   background-color: chartreuse;
@@ -97,5 +136,13 @@ h4 {
   border-radius: 8px;
   text-align: center;
   line-height: 22px;
-
 }
+
+@media only screen and (max-width: 768px) {
+  .message {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+  }
+} 
