@@ -1,5 +1,5 @@
 .pads {
-  width: 60%;
+  width: 65%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -17,7 +17,6 @@
   background-color: #212121;
   position: relative;
   border-radius: 8px;
-  font-size: 104px;
 }
 
 .pad:after {
@@ -35,8 +34,16 @@
 .sound-title {
   position: relative;
   z-index: 2;
-  padding: 14px 0px 0px 14px;
+  padding: 14px;
   font-size: 16px;
+  overflow-wrap: break-word;
+}
+
+@media only screen and (max-width: 768px) {
+  .sound-title {
+    font-size: 14px;
+    padding: 12px 12px 12px 12px;
+  }
 }
 
 .pad-assignment {
