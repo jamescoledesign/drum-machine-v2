@@ -7,6 +7,11 @@ import AllPads from './AllPads';
 import Button from './Button';
 
 function Interface() {
+
+  document.onkeydown = function() {
+  
+    alert("yes");
+  }
  
   const [mode, setMode] = useState("drumSounds");
  
@@ -42,7 +47,7 @@ function Interface() {
           </div>
         </div>
         <div id="message" className="message">
-            <p>Let's make noise!</p>
+            <p id="message-text">Let's make noise!</p>
         </div>
     </div>
     <AllPads mode={mode} />

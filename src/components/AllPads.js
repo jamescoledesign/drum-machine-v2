@@ -5,6 +5,8 @@ import '../styles/controls.css';
 
 function AllPads(props) {
 
+
+
   let [count, setCount] = useState(1);
 
   function checkCount() {
@@ -13,6 +15,7 @@ function AllPads(props) {
       setCount(1);
     }
     console.log(count);
+    document.getElementById("message").innerHTML = count; 
   }
 
   return (
@@ -26,28 +29,28 @@ function AllPads(props) {
           keyAssignment="Key 1"
           mode={props.mode}
           sound="0"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="pad2" 
           keyAssignment="Key 2"
           mode={props.mode}
           sound="1"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="pad3" 
           keyAssignment="Key 3"
           mode={props.mode}
           sound="2"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="pad4" 
           keyAssignment="Key 4"
           mode={props.mode}
           sound="3"
-          onClick={checkCount}
+          
           />
       </div>
 
@@ -59,28 +62,28 @@ function AllPads(props) {
           keyAssignment="Key Q"
           mode={props.mode}
           sound="4"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="padw" 
           keyAssignment="Key W"
           mode={props.mode}
           sound="5"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="pade" 
           keyAssignment="Key E"
           mode={props.mode}
           sound="6"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="padr" 
           keyAssignment="Key R"
           mode={props.mode}
           sound="7"
-          onClick={checkCount}
+          
           />
       </div>
 
@@ -92,28 +95,28 @@ function AllPads(props) {
           keyAssignment="Key A"
           mode={props.mode}
           sound="8"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="pads" 
           keyAssignment="Key S"
           mode={props.mode}
           sound="9"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="padd" 
           keyAssignment="Key D"
           mode={props.mode}
           sound="10"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="padf" 
           keyAssignment="Key F"
           mode={props.mode}
           sound="11"
-          onClick={checkCount}
+          
           />
       </div>
 
@@ -125,28 +128,28 @@ function AllPads(props) {
           keyAssignment="Key Z"
           mode={props.mode}
           sound="12"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="padx" 
           keyAssignment="Key X"
           mode={props.mode}
           sound="13"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="padc" 
           keyAssignment="Key C"
           mode={props.mode}
           sound="14"
-          onClick={checkCount}
+          
           />
         <Pad 
           id="padv" 
           keyAssignment="Key V"
           mode={props.mode}
           sound="15"
-          onClick={checkCount}
+          
           />
       </div>
     </section>

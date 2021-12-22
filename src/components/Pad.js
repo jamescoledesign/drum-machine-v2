@@ -4,6 +4,7 @@ import { sounds } from "../sounds"
 function Pad(props) {
     
     const [padName, setPadName] = useState();
+    let [count, setCount] = useState(1);
     let padSound;
 
     useEffect(() => {
@@ -26,6 +27,7 @@ function Pad(props) {
     }
 
     function handleClick() {
+        checkCount();
         makeSound(props.mode, props.sound);
         let pad = document.getElementById(props.id);
         pad.style.backgroundColor = "red";
@@ -39,46 +41,105 @@ function Pad(props) {
         padSound.currentTime = 0;
     }
 
+    function checkCount() {
+        let message = document.getElementById("message-text");
+        let newCount;
+        switch (message.innerHTML) {
+            case "Let's make noise!":
+                newCount = "1";
+                message.innerHTML = newCount;
+            break;
+            case "1":
+                newCount = "2";
+                message.innerHTML = newCount;
+            break;
+            case "2":
+                newCount = "3";
+                message.innerHTML = newCount;
+            break;
+            case "3":
+                newCount = "4";
+                message.innerHTML = newCount;
+            break;
+            case "4":
+                newCount = "1";
+                message.innerHTML = newCount;
+            break;
+            default:
+                console.log("Invalid selection");
+        }
+        console.log(message.innerHTML);
+      }
+
     document.onkeydown = function(e) {
         let keyResult = e.key.toLowerCase();
         let pad = document.getElementById("pad" + keyResult);
-        let newKey;
+        let newKey; 
+
         switch (keyResult) {
+            case "1":
+                newKey = "1";
+                checkCount();
+            break;
+            case "2":
+                newKey = "2";
+                checkCount();
+            break;
+            case "3":
+                newKey = "3";
+                checkCount();
+            break;
+            case "4":
+                newKey = "4";
+                checkCount();
+            break;
             case "q":
                 newKey = "4";
+                checkCount();
             break;
             case "w":
                 newKey = "5";
+                checkCount();
             break;
             case "e":
                 newKey = "6";
+                checkCount();
             break;
             case "r":
                 newKey = "7";
+                checkCount();
             break;
             case "a":
                 newKey = "8";
+                checkCount();
             break;
             case "s":
                 newKey = "9";
+                checkCount();
             break;
             case "d":
                 newKey = "10";
+                checkCount();
             break;
             case "f":
                 newKey = "11";
+                checkCount();
             break;
             case "z":
                 newKey = "12";
+                checkCount();
             break;
             case "x":
                 newKey = "13";
+                checkCount();
             break;
             case "c":
                 newKey = "14";
+                checkCount();
             break;
             case "v":
                 newKey = "15";
+                checkCount();
             break;
             default:
                 newKey = keyResult - 1;
