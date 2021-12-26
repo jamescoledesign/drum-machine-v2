@@ -4,6 +4,7 @@ import { sounds } from "../sounds"
 function Pad(props) {
     
     const [padName, setPadName] = useState();
+    let message = document.getElementById("message-text");
     let padSound;
 
     useEffect(() => {
@@ -43,7 +44,6 @@ function Pad(props) {
     function randomMessage() {
         let min = 0;
         let max = 4;
-        let message = document.getElementById("message-text");
         let messageArr, result;
 
         const drumMessages = [
@@ -79,19 +79,19 @@ function Pad(props) {
 
         switch (keyResult) {
            case "1":
-                newKey = "1";
+                newKey = "0";
                 randomMessage();
             break;
             case "2":
-                newKey = "2";
+                newKey = "1";
                 randomMessage();
             break;
             case "3":
-                newKey = "3";
+                newKey = "2";
                 randomMessage();
             break;
             case "4":
-                newKey = "4";
+                newKey = "3";
                 randomMessage();
             break;
             case "q":
@@ -159,7 +159,7 @@ function Pad(props) {
     }
 
     return (
-        <div id={props.id} className="pad" onMouseDown={handleClick} onMouseUp={resetPad} sound={props.sound} mode={props.mode} onClick={props.onClick}>
+        <div id={props.id} className="pad" onMouseDown={handleClick} onMouseUp={resetPad} sound={props.sound} mode={props.mode} onClick={props.onClick} onTouchStart={handleClick} onTouchEnd={resetPad}>
             <div className="pad-content noselect">
                 <div className="sound-title">{padName}</div>
                 <div className="pad-assignment">{props.keyAssignment}</div>

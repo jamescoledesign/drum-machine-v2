@@ -9,11 +9,6 @@ import Wave1 from '../images/wave1.svg'
 import Wave2 from '../images/wave2.svg'
 
 function Interface() {
-
-  document.onkeydown = function() {
-  
-    alert("yes");
-  }
  
   const [mode, setMode] = useState("drumSounds");
  
