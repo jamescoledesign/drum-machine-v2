@@ -5,13 +5,11 @@ import '../styles/controls.css';
 import Logo from '../images/WPD001-Logo_WPD001-Logo-Light.svg'
 import AllPads from './AllPads';
 import Button from './Button';
-import Wave1 from '../images/wave1.svg'
-import Wave2 from '../images/wave2.svg'
 
 function Interface() {
- 
+
   const [mode, setMode] = useState("drumSounds");
- 
+
   function loadDrumSounds() {
     setMode("drumSounds");
     document.getElementById("drum-button").className = "load-red";
@@ -31,18 +29,16 @@ function Interface() {
     </Helmet>
     <section id="interface" className="interface">
     <div id="controls" className="controls">
-        <div>
           <div className="logo"><img src={Logo} /></div>
           <div id="instructions" className="instructions">
               <h3>Instructions</h3>
               <p>Use your keyboard, mouse, or fingers to trigger the pads. The key controls are shown on each pad. Make sure your audio isn't muted!</p>
           </div>
           <hr />
-          <div className="buttons">
+        <div className="buttons">
             <Button id="drum-button" className="load-red" text="Load Drum Sounds" onClick={loadDrumSounds} />
             <Button id="cat-button" className="load-gray" text="Load Cat Sounds" onClick={loadCatSounds} />
           </div>
-        </div>
         <div id="message" className="message">
             <p id="message-text">Let's make noise!</p>
         </div>
