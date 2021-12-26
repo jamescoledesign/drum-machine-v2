@@ -27,7 +27,7 @@ function Pad(props) {
     }
 
     function handleClick() {
-        randomMessage();
+        checkCount();
         makeSound(props.sound);
         let pad = document.getElementById(props.id);
         pad.style.backgroundColor = "red";
@@ -72,6 +72,32 @@ function Pad(props) {
         message.innerHTML = messageArr[result];
     }
 
+    function checkCount() {
+        let count = "1";
+        let countText = document.getElementById("count");
+        switch (countText.innerHTML) {
+            case "1":
+                count = "2";
+                countText.innerHTML = count;
+            break;
+            case "2":
+                count = "3";
+                countText.innerHTML = count;
+            break;
+            case "3":
+                count = "4";
+                countText.innerHTML = count;
+            break;
+            case "4":
+                randomMessage();
+                count = "1";
+                countText.innerHTML = count;
+            break;
+            default:
+                console.log("Invalid selection");
+        }
+    }
+
     document.onkeydown = function(e) {
         let keyResult = e.key.toLowerCase();
         let pad = document.getElementById("pad" + keyResult);
@@ -80,67 +106,67 @@ function Pad(props) {
         switch (keyResult) {
            case "1":
                 newKey = "0";
-                randomMessage();
+                checkCount();
             break;
             case "2":
                 newKey = "1";
-                randomMessage();
+                checkCount();
             break;
             case "3":
                 newKey = "2";
-                randomMessage();
+                checkCount();
             break;
             case "4":
                 newKey = "3";
-                randomMessage();
+                checkCount();
             break;
             case "q":
                 newKey = "4";
-                randomMessage();
+                checkCount();
             break;
             case "w":
                 newKey = "5";
-                randomMessage();
+                checkCount();
             break;
             case "e":
                 newKey = "6";
-                randomMessage();
+                checkCount();
             break;
             case "r":
                 newKey = "7";
-                randomMessage();
+                checkCount();
             break;
             case "a":
                 newKey = "8";
-                randomMessage();
+                checkCount();
             break;
             case "s":
                 newKey = "9";
-                randomMessage();
+                checkCount();
             break;
             case "d":
                 newKey = "10";
-                randomMessage();
+                checkCount();
             break;
             case "f":
                 newKey = "11";
-                randomMessage();
+                checkCount();
             break;
             case "z":
                 newKey = "12";
-                randomMessage();
+                checkCount();
             break;
             case "x":
                 newKey = "13";
-                randomMessage();
+                checkCount();
             break;
             case "c":
                 newKey = "14";
-                randomMessage();
+                checkCount();
             break;
             case "v":
                 newKey = "15";
-                randomMessage();
+                checkCount();
             break;
             default:
                 newKey = keyResult - 1;
