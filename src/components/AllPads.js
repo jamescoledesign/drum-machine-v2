@@ -5,19 +5,6 @@ import '../styles/controls.css';
 
 function AllPads(props) {
 
-
-
-  let [count, setCount] = useState(1);
-
-  function checkCount() {
-    setCount(count + 1);
-    if (count >= 4) {
-      setCount(1);
-    }
-    console.log(count);
-    document.getElementById("message").innerHTML = count; 
-  }
-
   return (
     <section id="padContainer" className="pads" mode={props.mode} >
 

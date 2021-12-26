@@ -5,6 +5,8 @@ import '../styles/controls.css';
 import Logo from '../images/WPD001-Logo_WPD001-Logo-Light.svg'
 import AllPads from './AllPads';
 import Button from './Button';
+import Wave1 from '../images/wave1.svg'
+import Wave2 from '../images/wave2.svg'
 
 function Interface() {
 

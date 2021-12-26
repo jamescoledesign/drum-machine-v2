@@ -4,7 +4,6 @@ import { sounds } from "../sounds"
 function Pad(props) {
     
     const [padName, setPadName] = useState();
-    let [count, setCount] = useState(1);
     let padSound;
 
     useEffect(() => {
@@ -17,18 +16,18 @@ function Pad(props) {
         }
     });
 
-    function makeSound(mode, value) {
-        if (mode === "drumSounds") {
+    function makeSound(value) {
+        if (props.mode === "drumSounds") {
             padSound = sounds.drumSounds[value].sound;
-        } else if (mode === "catSounds") {
+        } else if (props.mode === "catSounds") {
             padSound = sounds.catSounds[value].sound;
         }
         return padSound = new Audio(padSound);
     }
 
     function handleClick() {
-        checkCount();
-        makeSound(props.mode, props.sound);
+        randomMessage();
+        makeSound(props.sound);
         let pad = document.getElementById(props.id);
         pad.style.backgroundColor = "red";
         padSound.play();
@@ -41,35 +40,37 @@ function Pad(props) {
         padSound.currentTime = 0;
     }
 
-    function checkCount() {
+    function randomMessage() {
+        let min = 0;
+        let max = 4;
         let message = document.getElementById("message-text");
-        let newCount;
-        switch (message.innerHTML) {
-            case "Let's make noise!":
-                newCount = "1";
-                message.innerHTML = newCount;
-            break;
-            case "1":
-                newCount = "2";
-                message.innerHTML = newCount;
-            break;
-            case "2":
-                newCount = "3";
-                message.innerHTML = newCount;
-            break;
-            case "3":
-                newCount = "4";
-                message.innerHTML = newCount;
-            break;
-            case "4":
-                newCount = "1";
-                message.innerHTML = newCount;
-            break;
-            default:
-                console.log("Invalid selection");
-        }
-        console.log(message.innerHTML);
-      }
+        let messageArr, result;
+
+        const drumMessages = [
+            "Let's make noise!",
+            "That sounds great!",
+            "Are you a pro?",
+            "Maybe practice more.",
+            "What a banger!"
+        ];
+
+        const catMessages = [
+            "Are you a feline?",
+            "That sounds catlike!",
+            "Is it food time?",
+            "I don't understand that.",
+            "What are you saying?!"
+        ];
+
+        result = Math.floor(Math.random() * (max - min + 1) + min);
+
+        if (props.mode === "drumSounds") {
+            messageArr = drumMessages;
+        } else if (props.mode === "catSounds") {
+            messageArr = catMessages;
+        } 
+        message.innerHTML = messageArr[result];
+    }
 
     document.onkeydown = function(e) {
         let keyResult = e.key.toLowerCase();
@@ -77,74 +78,74 @@ function Pad(props) {
         let newKey; 
 
         switch (keyResult) {
-            case "1":
+           case "1":
                 newKey = "1";
-                checkCount();
+                randomMessage();
             break;
             case "2":
                 newKey = "2";
-                checkCount();
+                randomMessage();
             break;
             case "3":
                 newKey = "3";
-                checkCount();
+                randomMessage();
             break;
             case "4":
                 newKey = "4";
-                checkCount();
+                randomMessage();
             break;
             case "q":
                 newKey = "4";
-                checkCount();
+                randomMessage();
             break;
             case "w":
                 newKey = "5";
-                checkCount();
+                randomMessage();
             break;
             case "e":
                 newKey = "6";
-                checkCount();
+                randomMessage();
             break;
             case "r":
                 newKey = "7";
-                checkCount();
+                randomMessage();
             break;
             case "a":
                 newKey = "8";
-                checkCount();
+                randomMessage();
             break;
             case "s":
                 newKey = "9";
-                checkCount();
+                randomMessage();
             break;
             case "d":
                 newKey = "10";
-                checkCount();
+                randomMessage();
             break;
             case "f":
                 newKey = "11";
-                checkCount();
+                randomMessage();
             break;
             case "z":
                 newKey = "12";
-                checkCount();
+                randomMessage();
             break;
             case "x":
                 newKey = "13";
-                checkCount();
+                randomMessage();
             break;
             case "c":
                 newKey = "14";
-                checkCount();
+                randomMessage();
             break;
             case "v":
                 newKey = "15";
-                checkCount();
+                randomMessage();
             break;
             default:
                 newKey = keyResult - 1;
         }
-        padSound = makeSound(props.mode, newKey);       
+        padSound = makeSound(newKey);
         pad.style.backgroundColor = "red";
         padSound.play();
     }
