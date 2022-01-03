@@ -13,3 +13,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.footer {
+  max-width: 960px;
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-wrapper {
+  padding: 0 10px 0 10px;
+}
+
+.footer-text {
+  color: white;
+  margin-top: 20px;
+}
+
+.about {
+  float: left;
+  color: white;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .about {
+    margin-left: 20px;
+  }
+} 
+
+.legal {
+  float: right;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .legal {
+    margin-right: 20px;
+  }
+} 
