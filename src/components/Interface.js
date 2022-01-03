@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import {Helmet} from "react-helmet";
 import '../styles/controls.css';
-import Logo from '../images/WPD001-Logo_WPD001-Logo-Light.svg'
+import Logo from '../images/MPD002.svg'
 import AllPads from './AllPads';
 import Button from './Button';
 

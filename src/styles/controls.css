@@ -179,9 +179,11 @@ h4 {
 .count {
   margin: 10px 10px 0 15px;
   text-align: center;
+  display: none;
 }
 
 .bpm {
   margin: 10px 15px 0 10px;
   text-align: center;
+  display: none;
 }
